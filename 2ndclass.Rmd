@@ -1,0 +1,17 @@
+---
+title: "2ndclass"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Class 2 - November 6th, 2018
+
+working directory -> staging area -> repository 
+
+git pulling... best for working in collaboration (no need when you're working alone)
+
+
