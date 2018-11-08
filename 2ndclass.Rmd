@@ -15,3 +15,12 @@ working directory -> staging area -> repository
 git pulling... best for working in collaboration (no need when you're working alone)
 
 
+```{r}
+
+```
+
+```{r}
+
+```
+
+
