@@ -23,4 +23,20 @@ git pulling... best for working in collaboration (no need when you're working al
 
 ```
 
+November 8, 2018
+
+NEVER EDIT YOUR DATA
+
+
+folders you should have
+
+R
+Datasets
+  -always raw
+Output
+  -processed data 
+Notes
+
+ONE COPY PER FILE
+
 
