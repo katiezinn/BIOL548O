@@ -40,4 +40,5 @@ Notes
 ONE COPY PER FILE
 
 COMMIT MESSAGES SHOULD BE INFORMATIVE 
+commit messages should reference issues
 
