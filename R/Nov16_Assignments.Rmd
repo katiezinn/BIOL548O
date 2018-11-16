@@ -1,0 +1,54 @@
+---
+title: "lecture4_exercises"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(gapminder)
+library(tidyverse)
+library(kableExtra)
+
+
+  
+
+Challenge 1
+calculate the mean life expectancy, population, and gdpPercap for each continent. Hint: use the group_by() and summarize() functions we learned in the dplyr lesson
+
+gapminder %>%
+  group_by(continent) %>%
+  summarize(avg_lifeExp=mean(lifeExp), avg_Pop=mean(pop), avg_GDP=mean(gdpPercap)) %>%
+  kable()
+
+Challenge 1h.1
+Rewrite the code above, but this time try using tidyr::gather(). HINT: First, gather all of the variables (lifeExp, pop and gdpPercap) into a new column called "variable_name". Then, group by both continent and variable_name
+
+gapminder %>% 
+  gather(lifeExp, pop, gdpPercap, key = "variable_name", value = "value") %>% 
+   group_by(continent, variable_name) %>% 
+  summarise(avg = mean(value))
+
+Widest data
+
+spread(data = gapminder, key = year, value = pop)
+
+gapminder %>% 
+  select(-lifeExp, -gdpPercap) %>% 
+  tidyr::spread(key="year", value = "pop")
+  
+
+head(gapminder)
+ 
+  
+wide <- gapminder %>% select(country, continent, year, pop) %>% spread(key="year", value="pop")
+
+long <- wide %>%  gather(1952:`2007`, key ="year", value = "pop_size")
+  
+
+
+```
+
+
