@@ -73,3 +73,6 @@ tax <- read_csv("Datasets/plant_taxonomy.csv")
 head(wood)
 head(tax)
 
+wood %>% separate(gs, c("genus", "species"), by = " ") %>%
+  left_join(tax, by = "genus") %>% select(-order, -group) %>% unite(species, c(genus, species), sep=" ") %>%
+  select(species, family, woodiness)
