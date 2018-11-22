@@ -1,0 +1,31 @@
+---
+title: "Nov22Notes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Organization
+  /R <- main analysis fie, does the analysis, makes the figures (a well-commented file)
+    <- R files with functions
+    <- data cleaning scripts
+      saveRDS() #only can be read by r
+      readRDS()
+Local paths only "datasets/sex_chrom" write out the output. df as csv, other as .rds
+
+Keep workspace clean
+-restart R occassionally
+-only import Fxn s e data you need
+use tidyr::spread() -- if you don't need the whole package only use what you need 
+
+Name variables and functions intelligibly
+
+```{r}
+source("tidyjoins.R")
+#pulls the airports and flights functions we ran last class, puts them all in the environment 
+```
+
+Rule(ish)
+- if you are going to do something more than twice, write a function
