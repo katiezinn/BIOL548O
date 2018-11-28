@@ -1,0 +1,74 @@
+---
+title: "Nov27Notes"
+output: html_document
+---
+
+# 9 rules for your data
+
+1) publish your data
+
+2) metadata
+  -> information about your data
+  -> create a .txt or .md file (README)
+    -> elements for a README
+         1) WHO
+          WHAT
+          WHERE
+          WHEN
+          WHY
+          HOW
+             2) descriptions of each file
+                    FILE NAMES
+                    COLUMN MEANINGS
+                                    3) issues or problems with the data
+                                                            4) basic parameters of the data
+                                                                  NCOL
+                                                                  NROWS
+  -> formal metadata?
+
+3) provide "raw" data (NEVER TOUCH IT)
+  -> no information lost
+  -> no converstions, etc 
+  
+4) standard file formats
+  -> **.csv** 
+        DON'T PUT COMMAS IN YOUR CELLS
+  -> lubridate R pkg (standardizes date and time format)
+  -> open file formats > closed 
+
+5) think about blanks
+  -> BLANK o -9999 **NA** na N/A ? " " 
+
+6) think about relational data
+  -> the plane example we did in the course (joins)
+  -> maybe I could do this with fish captures?? on different dates??
+
+7) check your data
+  -> tibble (character, integer)
+  -> some people write checks into their code (check for unique variables, check for data type)
+  -> DRYAD (also there is paper supplemental materials)
+    -> limitation: data has to be linked to a paper, and the data cannot change
+    -> can cite an individual data set
+  -> can we also "publish" to github
+    -> low discerable abilities
+    -> no DOI (digital object identifier) for it
+  -> Zenodo -- make code citeable "releases" -- releases on github you can time stamp or code your data 
+    -> DOIs can be cited
+  -> ropensci labs / datastorr on github 
+    -> way to streamline the code relase process from R
+  -> figshare -- website (free) that uploads anything, you can get a DOI for it. 
+  -> ropensci.org/packages
+  
+8) repos!?
+
+9) Licences 
+  -> MIT licence
+  -> www.creativecommons.org/choose 
+    -> legal framework built for sharing things on the internet 
+    -> CC - BY (anyone can use my data, but they have to cite me)
+       CC - 0 (anyone can use or share my data-- can do anything)
+       CC - NC - BY (non-commercial-- use it but you cannot make money off of it)
+    -> important for legal framework 
+  
+  
+              
